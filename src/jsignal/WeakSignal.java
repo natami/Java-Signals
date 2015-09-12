@@ -19,8 +19,12 @@ import java.util.Iterator;
  * 
  * @see jsignal.Signal
  */
-final class WeakSignal extends Signal {
-	
+public final class WeakSignal extends Signal {
+
+	public WeakSignal(Class<?>... params) {
+		super(params);
+	}
+
 	@Override
 	public Object add(Object listener, String callback, boolean addOnce) {
 		Method delegate;
